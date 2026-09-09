@@ -1,0 +1,78 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px 60px;
+}
+ 
+/* ---------- Imagen ---------- */
+#imagen {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    filter: brightness(0.55) saturate(0.85);
+}
+ 
+/* ---------- Marca / Modelo ---------- */
+#marca {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+ 
+#modelo {
+    font-size: 0.9rem;
+    color: #a0a0ab;
+    margin-bottom: 18px;
+}
+ 
+/* ---------- Precio ---------- */
+#precio {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+ 
+/* ---------- Descripción ---------- */
+#descripcion {
+    font-size: 0.95rem;
+    color: #cfcfd6;
+    max-width: 500px;
+}
+ 
+/* ---------- Botones ---------- */
+button,
+.btn-primario {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    padding: 12px 26px;
+    border-radius: 8px;
+    border: 2px solid;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+ 
+/* Botón "Agregar al carrito" */
+.btn-primario {
+    background-color: var(--color-primario);
+    color: var(--color-texto);
+}
+ 
+.btn-primario:hover {
+    background-color: #8f3f68;
+}
+ 
+/* Botón "Volver al Catálogo" (sin clase, así que apunta al button dentro del <a>) */
+body > div a button {
+    background-color: transparent;
+    border-color: var(--color-secundario);
+    color: var(--color-secundario);
+}
+ 
+body > div a button:hover {
+    background-color: var(--color-secundario);
+    color: var(--color-texto);
+}
+ 

@@ -342,3 +342,20 @@ footer p {
     letter-spacing: 1px;
     margin: 0;
 }
+
+footer a {
+    color: var(--rosa-claro);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: var(--morado-claro);
+}
+
+footer img {
+    width: 90px;
+    height: 90px;
+    transition: 0.3s;
+    
+}
