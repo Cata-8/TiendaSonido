@@ -18,12 +18,14 @@ main h1 {
     justify-content: center;
     padding: 20px;
     height: 220px;
+    filter: brightness(0.55) saturate(0.85);
 }
  
 .producto-img {
     max-height: 100%;
     max-width: 100%;
     object-fit: contain;
+    filter: brightness(0.95);
 }
  
 .card-body {
