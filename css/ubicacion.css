@@ -1,53 +1,22 @@
-.ubicacion {
-    padding: 30px 5% 80px;
-}
-
-.ubicacion h1 {
-    margin-left: 0;
-    color: var(--rosa-claro);
-}
-
 .ubicacion-contenido {
     display: flex;
     gap: 30px;
     margin-top: 40px;
 }
-
-
 .ubicacion-info {
     flex: 1;
     background-color: var(--negro-2);
     border: 1px solid var(--borde);
     padding: 35px;
 }
-
 .ubicacion-info h2 {
     font-family: 'Creepster', cursive;
     color: var(--rosa-claro);
-    font-size: 2rem;
-    margin-bottom: 30px;
 }
-
 .dato {
     display: flex;
     gap: 18px;
     align-items: flex-start;
     padding: 20px 0;
     border-bottom: 1px solid var(--borde);
-}
-
-.dato span {
-    font-size: 25px;
-    color: var(--rosa-claro);
-}
-
-.dato h3 {
-    margin: 0 0 5px;
-    color: var(--blanco);
-}
-
-.dato p {
-    margin: 0;
-    color: var(--gris);
-    font-size: 0.85rem;
 }

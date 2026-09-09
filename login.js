@@ -21,7 +21,7 @@ function ingresar(){
     }
 
     if (correo === "sonidovivo@gmail.cl" && clave === "1234") {
-        window.location.href = "admin.html";
+        window.location.href = "admin/admin.html";
     }
     else if (correo === "usuario@gmail.cl" && clave === "5678") {
         window.location.href = "usuario.html";

@@ -3,35 +3,20 @@ body {
     align-items: center;
     justify-content: center;
 }
-
 .login {
-    width: 480px;
     border-radius: 5px;
-    max-width: 90%;
     padding: 45px 55px;
     background-color: #111116;
     border: 1px solid #3b3450;
-
-    box-shadow:
-        0 20px 60px rgba(0, 0, 0, 0.7),
-        0 0 30px rgba(107, 95, 167, 0.08);
 }
-
 .login h1 {
     text-align: center;
     margin: 0 0 35px;
 }
-
 .login h1::after {
-    display: block;
-    width: 90px;
-    height: 3px;
     background-color: #a54c7a;
     margin: 12px auto 0;
 }
-
-
-/*LABELS*/
 .login label {
     display: block;
     color: #806bb5;
@@ -39,35 +24,17 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     margin-top: 20px;
-    margin-bottom: 8px;
 }
-
-
-/*INPUTS*/
 .login input {
     display: block;
     width: 100%;
     height: 48px;
-    background-color: #0b0b10;
+    background-color: black;
     border: 1px solid #493b5c;
     border-radius: 4px;
     color: #ededed;
-    padding: 0 15px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.85rem;
-    transition: 0.3s;
 }
-
-
-/* Cuando haces click */
-.login input:focus {
-    border-color: #806bb5;
-}
-
-
-/*BOTÓN INGRESAR*/
 .login button {
-    display: block;
     width: 100%;
     height: 48px;
     margin-top: 30px;
@@ -75,21 +42,15 @@ body {
     border: solid #a54c7a;
     border-radius: 4px;
     color: white;
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.85rem;
     font-weight: 600;
-    text-transform: uppercase;
     cursor: pointer;
     transition: 0.3s;
 }
-
-
 .login button:hover {
     background-color: #6b5fa7;
     border-color: #6b5fa7;
     transform: translateY(-2px);
 }
-
 
 /*TEXTO REGISTRO*/
 .login p {
@@ -104,27 +65,4 @@ body {
 .login p a {
     color: #bd5b88;
     font-weight: 600;
-}
-
-
-/*
-   Si quieres poner a Hambo en la página,
-   cambia "hambo.png" por el nombre de tu imagen.
-*/
-
-body.login-page::after {
-    content: "";
-    position: fixed;
-    bottom: -10px;
-    left: 35px;
-    width: 170px;
-    height: 170px;
-    background-image: url("imagenes/hambo.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: 1;
-
-    filter:
-        drop-shadow(0 8px 12px rgba(0,0,0,0.8));
 }
