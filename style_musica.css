@@ -287,11 +287,21 @@ h1::after {
     transform: translateY(-2px);
 }
 
-/* -------------------------
-   CATEGORÍAS
-   ------------------------- */
+.card-ver-mas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 405px;
+}
 
-/* Las cards de categorías */
+.card-ver-mas .btn-ver-mas {
+    background-color: transparent !important;
+    border: 2px solid var(--rosa) !important;
+    color: var(--rosa-claro) !important;
+
+    width: auto;
+    padding: 10px 40px;
+}
 
 h1:nth-of-type(2) {
     color: var(--rosa-claro);
