@@ -307,34 +307,12 @@ h1:nth-of-type(2) {
     color: var(--rosa-claro);
 }
 
-
-footer {
-    margin-top: 80px;
-    min-height: 180px;
-    background-color: #0a0a0e;
+.footer {
+    background-color: var(--negro-2);
     border-top: 1px solid var(--borde);
-    margin-left: 10%;
+    margin-top: 60px;
+    padding-top: 35px;
 }
-
-
-/* Línea morada superior */
-
-footer::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-
-    background: linear-gradient(
-        90deg,
-        var(--morado),
-        var(--rosa),
-        var(--morado)
-    );
-}
-
 
 footer p {
     color: #77747b;
@@ -353,9 +331,37 @@ footer a:hover {
     color: var(--morado-claro);
 }
 
-footer img {
-    width: 90px;
-    height: 90px;
-    transition: 0.3s;
-    
+.footer-contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footer-columna {
+    padding: 20px 30px;
+}
+
+/* Línea divisoria */
+.footer-columna + .footer-columna {
+    border-left: 1px solid var(--morado);
+}
+
+.footer-final {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 20px auto 0;
+    padding: 20px 0;
+
+    border-top: 1px solid var(--borde);
+
+    text-align: center;
+
+    color: var(--gris);
+    font-size: 14px;
+}
+
+.hambo-footer {
+    width: 100px;
+    right: 40px;
+    bottom: 20px;
 }

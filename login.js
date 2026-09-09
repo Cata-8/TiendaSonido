@@ -20,13 +20,14 @@ function ingresar(){
         return;
     }
 
-    if (correo === "admin@demo.cl" && clave === "1234") {
+    if (correo === "sonidovivo@gmail.cl" && clave === "1234") {
         window.location.href = "admin.html";
     }
-    else if (correo === "usuario@demo.cl" && clave === "5678") {
+    else if (correo === "usuario@gmail.cl" && clave === "5678") {
         window.location.href = "usuario.html";
-    }
-    else{
+    }else if (correo === "usuario2@gmail.cl" && clave === "5678") {
+        window.location.href = "usuario2.html";
+    }else{
         alert("Correo o clave incorrectos");
     }
 }
