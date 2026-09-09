@@ -1,0 +1,228 @@
+.carrito-div {
+    text-align: center;
+    align-items: center;
+    padding: 60px 20px 50px;
+}
+
+.carrito-subtitulo::after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 3px;
+    background-color: #a54c7a;
+    margin: 10px auto 0;
+}
+
+/* ---------- Layout principal ---------- */
+.carrito-layout {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    padding: 45px 4% 80px;
+    max-width: 1400px;
+}
+
+/* ---------- Columna de ítems ---------- */
+.carrito-items {
+    display: flex;
+    flex-direction: column;
+}
+
+#carritoContenedor {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.carrito-vacio {
+    text-align: center;
+    color: #aaa7ad;
+    padding: 60px 0;
+}
+
+.carrito-vacio a {
+    color: #bd5b88;
+    font-weight: 600;
+}
+
+/* ---------- Tarjeta de ítem ---------- */
+.carrito-item-card {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    background-color: #111116;
+    border: 1px solid #292733;
+    border-radius: 10px;
+    padding: 22px 26px;
+}
+
+.carrito-item-img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    background-color: #1b1b22;
+    border-radius: 8px;
+    padding: 10px;
+    flex-shrink: 0;
+}
+
+.carrito-item-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.carrito-item-nombre {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #ededed;
+    margin: 0 0 4px;
+}
+
+.carrito-item-marca {
+    font-size: 0.9rem;
+    color: #806bb5;
+    margin: 0 0 10px;
+}
+
+.carrito-item-precio {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #bd5b88;
+    margin: 0;
+}
+
+/* ---------- Control de cantidad ---------- */
+.cantidad-control {
+    display: flex;
+    align-items: center;
+    background-color: #15151c;
+    border-radius: 6px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.cantidad-control button {
+    background-color: #6b5fa7;
+    color: white;
+    border: none;
+    width: 34px;
+    height: 34px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.cantidad-control button:hover {
+    background-color: #a54c7a;
+}
+
+.cantidad-control input {
+    width: 42px;
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    color: #ededed;
+    height: 34px;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+/* ---------- Botón eliminar ---------- */
+.carrito-item-eliminar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: none;
+    color: #bd5b88;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.carrito-item-eliminar:hover {
+    color: #f08080;
+}
+
+.carrito-item-eliminar i {
+    font-size: 1rem;
+}
+
+/* ---------- Volver al catálogo ---------- */
+.volver-catalogo {
+    display: inline-block;
+    margin-top: 22px;
+    color: #bd5b88;
+    text-decoration: underline;
+    font-size: 0.9rem;
+}
+
+/* ---------- Resumen de compra (sidebar) ---------- */
+.resumen-compra {
+    align-self: start;
+    background-color: #111116;
+    border: 2px dashed rgba(165, 76, 122, 0.4);
+    border-radius: 14px;
+    padding: 30px 26px;
+}
+
+.resumen-compra h2 {
+    font-family: 'Creepster', cursive;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #bd5b88;
+    text-align: center;
+    margin: 0 0 8px;
+    position: relative;
+}
+
+.resumen-linea {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95rem;
+    color: #aaa7ad;
+    margin-bottom: 14px;
+}
+
+.envio-gratis {
+    color: #7fd39a;
+    font-weight: 600;
+}
+
+.resumen-total {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ededed;
+}
+
+.btn-comprar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    background-color: #a54c7a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.btn-comprar:hover {
+    background-color: #6b5fa7;
+    transform: translateY(-2px);
+}
+
+.compra-segura {
+    text-align: center;
+    color: #aaa7ad;
+    font-size: 0.85rem;
+    margin-top: 18px;
+    line-height: 1.5;
+}

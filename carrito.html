@@ -3,25 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    
     <link rel="stylesheet" href="style_musica.css">
+    <link rel="stylesheet" href="carrito.css">
     <title>Carrito</title>
 </head>
 <body>
-    <h1>Carrito</h1>
 
-    <div id="carritoContenedor" class="carrito-contenedor">
-    </div>
-
-    <div class="carrito-resumen">
-        <p class="carrito-total">Total: <span id="carritoTotal">$0</span></p>
-
-        <div class="carrito-acciones">
-            <button class="btn-secundario" onclick="vaciarCarrito()">Vaciar carrito</button>
-            <a href="catalogo.html" class="btn-fantasma-link">Seguir comprando</a>
-            <button class="btn-primario" onclick="finalizarCompra()">Finalizar compra</button>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">SONIDO VIVO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ubicacion.html">Ubicación</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Catálogo
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="guitarras.html">Guitarras</a></li>
+                            <li><a class="dropdown-item" href="bajos.html">Bajos</a></li>
+                            <li><a class="dropdown-item" href="baterias.html">Baterías</a></li>
+                            <li><a class="dropdown-item" href="teclados.html">Teclados y Pianos</a></li>
+                            <li><a class="dropdown-item" href="amplificadores.html">Amplificadores</a></li>
+                            <li><a class="dropdown-item" href="microfonos.html">Micrófonos</a></li>
+                            <li><a class="dropdown-item" href="pedales.html">Pedales de Efectos</a></li>
+                            <li><a class="dropdown-item" href="accesorios.html">Accesorios</a></li>
+                            <li><a class="dropdown-item" href="estudio_grabacion.html">Estudio y Grabación</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
+    </nav>
+
+    <div class="carrito-div">
+        
+        <h1>Tu Carrito</h1>
+        <p class="carrito-subtitulo">Revisa los productos que elegiste</p>
     </div>
 
+    <div class="container carrito-layout">
+
+        <div class="carrito-items">
+            <div id="carritoContenedor">
+            </div>
+            <a href="catalogo.html" class="volver-catalogo">← Volver al catálogo</a>
+        </div>
+
+        <aside class="resumen-compra">
+            <h2>Resumen de compra</h2>
+            <div class="resumen-linea">
+                <span>Subtotal (<span id="resumenCount">0</span> productos)</span>
+                <span id="resumenSubtotal">$0</span>
+            </div>
+            <div class="resumen-linea">
+                <span>Envío</span>
+                <span class="envio-gratis">Gratis</span>
+            </div>
+            <hr>
+            <div class="resumen-linea resumen-total">
+                <span>Total</span>
+                <span id="resumenTotal">$0</span>
+            </div>
+            <button class="btn-comprar" onclick="finalizarCompra()">
+                <i class="bi bi-cart-fill"></i> Comprar
+            </button>
+            <p class="compra-segura">
+                <i class="bi bi-shield-check"></i>
+                Compra segura<br>
+                <small>Tus datos están protegidos</small>
+            </p>
+        </aside>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="carrito.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+</body>
+</html>
 </body>
 </html>
