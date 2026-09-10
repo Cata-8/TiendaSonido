@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="tituloPagina">Nuevo Producto</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+
+    <div class="admin-wrapper">
+
+        <aside class="admin-sidebar">
+            <div class="admin-logo">
+                <strong>SONIDO VIVO</strong>
+                <span>Panel Administrador</span>
+            </div>
+
+            <nav class="admin-nav">
+                <a href="admin.html"><i class="bi bi-grid-1x2-fill"></i><span>Dashboard</span></a>
+                <a href="admin_productos.html" class="active"><i class="bi bi-guitar"></i><span>Productos</span></a>
+                <a href="admin_usuarios.html"><i class="bi bi-people-fill"></i><span>Usuarios</span></a>
+            </nav>
+
+            <div class="admin-sidebar-footer">
+                <a href="inicio.html"><i class="bi bi-box-arrow-left"></i><span>Volver al sitio</span></a>
+                <a href="login.html"><i class="bi bi-power"></i><span>Cerrar sesión</span></a>
+            </div>
+        </aside>
+
+        <main class="admin-main">
+            <div class="admin-topbar">
+                <h1 id="tituloFormulario">Nuevo Producto</h1>
+                <div class="admin-topbar-user">
+                    <span>Admin</span>
+                    <div class="avatar">A</div>
+                </div>
+            </div>
+
+            <div class="admin-content">
+                <div class="admin-panel-box">
+
+                    <form id="formProducto" onsubmit="return guardarProducto(event)">
+
+                        <div class="admin-form-grid">
+
+                            <div class="admin-form-group">
+                                <label>Código</label>
+                                <input type="text" id="codigo" placeholder="Ej: GA006" required>
+                            </div>
+
+                            <div class="admin-form-group">
+                                <label>Categoría</label>
+                                <select id="categoria" required>
+                                    <option value="">Seleccione categoría</option>
+                                    <option>Guitarras Acústicas</option>
+                                    <option>Guitarras Eléctricas</option>
+                                    <option>Bajos Eléctricos</option>
+                                    <option>Baterías</option>
+                                    <option>Teclados y Pianos</option>
+                                    <option>Amplificadores</option>
+                                    <option>Micrófonos</option>
+                                    <option>Pedales de Efectos</option>
+                                    <option>Accesorios</option>
+                                    <option>Estudio y Grabación</option>
+                                </select>
+                            </div>
+
+                            <div class="admin-form-group full">
+                                <label>Nombre del producto</label>
+                                <input type="text" id="nombre" placeholder="Ej: Guitarra Acústica Folk" required>
+                            </div>
+
+                            <div class="admin-form-group">
+                                <label>Marca</label>
+                                <input type="text" id="marca" required>
+                            </div>
+
+                            <div class="admin-form-group">
+                                <label>Modelo</label>
+                                <input type="text" id="modelo" required>
+                            </div>
+
+                            <div class="admin-form-group">
+                                <label>Precio (CLP)</label>
+                                <input type="number" id="precio" min="0" required>
+                            </div>
+
+                            <div class="admin-form-group">
+                                <label>Stock</label>
+                                <input type="number" id="stock" min="0" required>
+                            </div>
+
+                            <div class="admin-form-group full">
+                                <label>Ruta de imagen</label>
+                                <input type="text" id="imagen" placeholder="imagenes/nombre_archivo.jpg" required>
+                            </div>
+
+                            <div class="admin-form-group full">
+                                <label>Descripción</label>
+                                <textarea id="descripcion" required></textarea>
+                            </div>
+
+                        </div>
+
+                        <div class="admin-form-actions">
+                            <button type="submit" class="btn-admin btn-admin-primario">
+                                <i class="bi bi-check-lg"></i> Guardar producto
+                            </button>
+                            <a href="admin_productos.html" class="btn-admin btn-admin-secundario">Cancelar</a>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <script src="catalogo.js"></script>
+    <script src="admin.js"></script>
+    <script src="admin-producto-form.js"></script>
+</body>
+</html>

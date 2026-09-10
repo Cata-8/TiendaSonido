@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Administrador Productos</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+
+    <div class="admin-wrapper">
+
+        <aside class="admin-sidebar">
+            <div class="admin-logo">
+                <strong>SONIDO VIVO</strong>
+                <span>PANEL ADMINISTRADOR</span>
+            </div>
+
+            <nav class="admin-nav">
+                <a href="admin.html"><i class="bi bi-grid-1x2-fill"></i><span>Dashboard</span></a>
+                <a href="admin_productos.html" class="active"><i class="bi bi-guitar"></i><span>Productos</span></a>
+                <a href="admin_usuarios.html"><i class="bi bi-people-fill"></i><span>Usuarios</span></a>
+            </nav>
+
+            <div class="admin-sidebar-footer">
+                <a href="inicio.html"><i class="bi bi-box-arrow-left"></i><span>Volver al sitio</span></a>
+                <a href="login.html"><i class="bi bi-power"></i><span>Cerrar sesión</span></a>
+            </div>
+        </aside>
+
+        <main class="admin-main">
+            <div class="admin-topbar">
+                <h1>Mantenedor de Productos</h1>
+                <div class="admin-topbar-user">
+                    <span>Admin</span>
+                    <div class="avatar">A</div>
+                </div>
+            </div>
+
+            <div class="admin-content">
+
+                <div class="admin-panel-box">
+
+                    <div class="admin-actionbar">
+                        <div class="admin-search">
+                            <i class="bi bi-search"></i>
+                            <input type="text" id="buscarProducto" placeholder="Buscar por nombre, marca o código...">
+                        </div>
+
+                        <a href="admin_editar_prod.html" class="btn-admin btn-admin-primario">
+                            <i class="bi bi-plus-lg"></i>+ Nuevo producto
+                        </a>
+                    </div>
+
+                    <div class="admin-table-wrap">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Código</th>
+                                    <th>Nombre</th>
+                                    <th>Categoría</th>
+                                    <th>Marca</th>
+                                    <th>Precio</th>
+                                    <th>Stock</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tablaProductos">
+                                <!-- filas generadas por JS -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+
+    <script src="catalogo.js"></script>
+    <script src="admin.js"></script>
+    <script src="admin_productos.js"></script>
+</body>
+</html>

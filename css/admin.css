@@ -1,12 +1,4 @@
-/* ==========================================================
-   SONIDO VIVO — Panel de Administración
-   Visualmente diferenciado de la sección pública:
-   sidebar fijo, tipografía de dashboard (no gótica),
-   acentos morados en vez de rosados.
-   ========================================================== */
-
 :root {
-    --admin-fondo: #131318;
     --admin-panel: #1a1a22;
     --admin-panel-2: #20202a;
     --admin-borde: #2f2f3d;
@@ -20,32 +12,21 @@
     --admin-amarillo: #d1a75f;
 }
 
-* {
-    box-sizing: border-box;
-}
-
 body.admin-body {
     margin: 0;
-    background-color: var(--admin-fondo);
+    background-color: black;
     color: var(--admin-texto);
     font-family: 'Poppins', sans-serif;
 }
-
 .admin-wrapper {
     display: flex;
-    min-height: 100vh;
 }
 
 /* ---------- Sidebar ---------- */
 .admin-sidebar {
-    width: 250px;
-    flex-shrink: 0;
-    background: linear-gradient(180deg, #1c1626, #14111c);
-    border-right: 1px solid var(--admin-borde);
+    background: #1c1626;
     display: flex;
     flex-direction: column;
-    position: sticky;
-    top: 0;
     height: 100vh;
 }
 
@@ -54,72 +35,41 @@ body.admin-body {
     border-bottom: 1px solid var(--admin-borde);
 }
 
-.admin-logo strong {
-    font-size: 1.1rem;
-    letter-spacing: 1px;
-}
-
 .admin-logo span {
     display: block;
     font-size: 0.7rem;
     color: var(--admin-morado-claro);
-    text-transform: uppercase;
     letter-spacing: 2px;
-    margin-top: 2px;
 }
 
 .admin-nav {
     flex: 1;
     padding: 18px 12px;
 }
-
 .admin-nav a {
     display: flex;
-    align-items: center;
-    gap: 12px;
     padding: 12px 14px;
     border-radius: 8px;
     color: var(--admin-gris);
     text-decoration: none;
-    font-size: 0.9rem;
     font-weight: 500;
-    margin-bottom: 4px;
     transition: 0.2s;
 }
-
-.admin-nav a i {
-    font-size: 1.05rem;
-    width: 20px;
-    text-align: center;
-}
-
 .admin-nav a:hover {
     background-color: var(--admin-panel-2);
     color: var(--admin-texto);
 }
-
 .admin-nav a.active {
     background-color: var(--admin-morado);
     color: white;
 }
 
-.admin-sidebar-footer {
-    padding: 16px 12px;
-    border-top: 1px solid var(--admin-borde);
-}
-
 .admin-sidebar-footer a {
     display: flex;
-    align-items: center;
-    gap: 12px;
     padding: 10px 14px;
     color: var(--admin-gris);
     text-decoration: none;
-    font-size: 0.85rem;
-    border-radius: 8px;
-    transition: 0.2s;
 }
-
 .admin-sidebar-footer a:hover {
     background-color: var(--admin-panel-2);
     color: var(--admin-rojo);
@@ -435,25 +385,4 @@ table.admin-table {
     margin-top: 28px;
     padding-top: 22px;
     border-top: 1px solid var(--admin-borde);
-}
-
-/* ---------- Responsive ---------- */
-@media (max-width: 900px) {
-    .admin-sidebar {
-        width: 70px;
-    }
-
-    .admin-logo span,
-    .admin-nav a span,
-    .admin-sidebar-footer a span {
-        display: none;
-    }
-
-    .admin-nav a {
-        justify-content: center;
-    }
-
-    .admin-form-grid {
-        grid-template-columns: 1fr;
-    }
 }
