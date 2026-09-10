@@ -22,7 +22,7 @@ function renderTablaUsuarios(lista) {
                 <td><span class="badge-rol ${claseBadge}">${u.rol}</span></td>
                 <td>
                     <div class="tabla-acciones">
-                        <a href="admin-usuario-form.html?id=${u.id}" title="Editar"><i class="bi bi-pencil"></i></a>
+                        <a href="admin_editar_user.html?id=${u.id}" title="Editar"><i class="bi bi-pencil"></i></a>
                         <button class="btn-eliminar" onclick="eliminarUsuario(${u.id})" title="Eliminar"><i class="bi bi-trash"></i></button>
                     </div>
                 </td>

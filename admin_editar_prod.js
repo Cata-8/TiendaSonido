@@ -8,7 +8,7 @@ if (codigoEditar) {
     productoEditando = productos.find(p => p.codigo === codigoEditar);
 
     if (productoEditando) {
-        document.getElementById("tituloPagina").textContent = "Editar Producto | Panel Administrador";
+        document.getElementById("tituloPagina").textContent = "Editar Producto";
         document.getElementById("tituloFormulario").textContent = "Editar Producto";
 
         document.getElementById("codigo").value = productoEditando.codigo;

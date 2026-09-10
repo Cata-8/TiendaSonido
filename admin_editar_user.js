@@ -63,7 +63,7 @@ function guardarUsuario(event) {
     }
 
     alert(usuarioEditando ? "Usuario actualizado correctamente" : "Usuario creado correctamente");
-    window.location.href = "admin-usuarios.html";
+    window.location.href = "admin_usuarios.html";
 
     return false;
 }
