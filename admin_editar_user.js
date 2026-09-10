@@ -11,8 +11,13 @@ if (idEditar) {
         document.getElementById("tituloPagina").textContent = "Editar Usuario | Panel Administrador";
         document.getElementById("tituloFormulario").textContent = "Editar Usuario";
 
+        document.getElementById("run").value = usuarioEditando.run;
+        document.getElementById("tipoUsuario").value = usuarioEditando.tipoUsuario || usuarioEditando.rol;
         document.getElementById("nombre").value = usuarioEditando.nombre;
+        document.getElementById("apellidos").value = usuarioEditando.apellidos;
         document.getElementById("correo").value = usuarioEditando.correo;
+        document.getElementById("fechaNacimiento").value = usuarioEditando.fechaNacimiento;
+    document.getElementById("direccion").value = usuarioEditando.direccion;
         document.getElementById("clave").value = usuarioEditando.clave;
         document.getElementById("rol").value = usuarioEditando.rol;
     }
@@ -21,8 +26,26 @@ if (idEditar) {
 function guardarUsuario(event) {
     event.preventDefault();
 
-    let correo = document.getElementById("correo").value.trim();
+    let datos = {
+        run: document.getElementById("run").value.trim(),
+        nombre: document.getElementById("nombre").value.trim(),
+        apellidos: document.getElementById("apellidos").value.trim(),
+        correo: document.getElementById("correo").value.trim(),
+        fechaNacimiento: document.getElementById("fechaNacimiento").value,
+        tipoUsuario: document.getElementById("tipoUsuario").value,
+        region: document.getElementById("region").value,
+        comuna: document.getElementById("comuna").value,
+        direccion: document.getElementById("direccion").value.trim()
+    };
+
     let clave = document.getElementById("clave").value;
+
+    let resultado = validarFormularioUsuario(datos);
+ 
+    if (!resultado.valido) {
+        alert(resultado.mensaje);
+        return false;
+    }
 
     let formatoCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!formatoCorreo.test(correo)) {

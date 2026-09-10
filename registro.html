@@ -5,24 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style_musica.css">
     <link rel="stylesheet" href="css/login.css">
-    <title>Registro</title>
+    <title>Registrarse</title>
 </head>
 <body>
-    <div class="login">
+    <div class="login login-ancho">
 
         <h1>Crear cuenta:</h1>
 
-        <label>Nombre completo</label>
-        <input type="text" id="nombre">
+        <label>RUN (sin puntos ni guión)</label>
+        <input type="text" id="run" maxlength="9" placeholder="Ej: 12345678K">
+
+        <label>Nombre</label>
+        <input type="text" id="nombre" maxlength="50">
+
+        <label>Apellidos</label>
+        <input type="text" id="apellidos" maxlength="100">
 
         <label>Correo</label>
-        <input type="email" id="correo">
+        <input type="email" id="correo" maxlength="100">
+
+        <label>Fecha de nacimiento (opcional)</label>
+        <input type="date" id="fechaNacimiento">
+
+        <label>Tipo de usuario</label>
+        <select id="tipoUsuario">
+            <option value="">Seleccione tipo de usuario</option>
+            <option value="cliente">Cliente</option>
+            <option value="admin">Administrador</option>
+        </select>
+
+        <label>Región</label>
+        <input type="text id="region">
+
+        <label>Comuna</label>
+        <input type="text" id="comuna">
+
+        <label>Dirección</label>
+        <input type="text" id="direccion" maxlength="300">
 
         <label>Clave:</label>
-        <input type="password" id="clave" maxlength="4">
+        <input type="password" id="clave" maxlength="10">
 
         <label>Confirmar clave:</label>
-        <input type="password" id="confirmarClave" maxlength="4">
+        <input type="password" id="confirmarClave" maxlength="10">
 
         <button onclick="registrar()">REGISTRARME</button>
 
@@ -33,6 +58,6 @@
     </div>
 
     <script src="registro.js"></script>
-    
+
 </body>
 </html>

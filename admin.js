@@ -24,8 +24,8 @@ function inicializarUsuarios() {
 
     if (!usuarios) {
         let usuariosBase = [
-            { id: 1, nombre: "Administrador", correo: "admin@demo.cl", clave: "1234", rol: "admin" },
-            { id: 2, nombre: "Usuario Demo", correo: "usuario@demo.cl", clave: "5678", rol: "cliente" }
+            { id: 1, nombre: "Administrador", correo: "sonidovivo@gmail.cl", clave: "1234", rol: "admin" },
+            { id: 2, nombre: "Usuario", correo: "usuario@gmail.cl", clave: "5678", rol: "cliente" }
         ];
         localStorage.setItem("usuarios", JSON.stringify(usuariosBase));
     }
